@@ -1,9 +1,15 @@
-# Fragmentos de Código de React
+# Autenticación de Usuarios
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" title="React" alt="React" width="150" height="150"/>&nbsp;
-  <p>Aquí encontrarás snippets de código para los diferentes aspectos de la librería de <a href="http://reactjs.org/" target="_blank">React</a></p>
-  <p>Consulta la <a href="https://es.reactjs.org/docs/getting-started.html" target="_blank">documentación oficial</a> de React para conocer más detalles</p>
+  <img src="./readme_icons/react.svg#gh-light-mode-only" title="React" alt="React" />
+  <img src="./readme_icons/react.svg#gh-dark-mode-only" title="React" alt="React" />
+  <img src="./readme_icons/react-router.svg#gh-light-mode-only" title="React Router" alt="React Router" />
+  <img src="./readme_icons/react-router.svg#gh-dark-mode-only" title="React Router" alt="React Router" />
+  <img src="./readme_icons/jwt.svg#gh-light-mode-only" title="JSON Web Token" alt="JSON Web Token" />
+  <img src="./readme_icons/jwt.svg#gh-dark-mode-only" title="JSON Web Token" alt="JSON Web Token" />
+
+  <p>Este repo provee una solución para la autenticación del usuario en <a href="http://reactjs.org/" target="_blank">React</a></p>
+  <p>Consulta la documentación oficial de las librerías de <a href="https://es.reactjs.org/docs/getting-started.html" target="_blank">React</a>, <a href="https://reactrouter.com/docs/en/v6/getting-started/overview" target="_blank">React Router v6</a>, y <a href="https://jwt.io/introduction" target="_blank">JSON Web Token</a> para conocer más detalles</p>
   <a href="https://skillsfor.womenintech.mx" target="_blank">
     <img src="https://skillsfor.womenintech.mx/mainLogo.png" title="Skills for Women in Tech" alt="SFWIT" width="32px" height="32px" />
   </a>
@@ -20,22 +26,5 @@
 ## Instalación
 
 ```sh
-git clone "https://github.com/DigitalNaut/react-cheat-sheet" && cd react-cheat-sheet && npm i && npm start
+git clone "https://github.com/DigitalNaut/react-user-authentication" && cd react-cheat-sheet && npm i && npm start
 ```
-
-## Instrucciones
-
-Cambia de rama para ver los snippets de código de React
-
-## Categorías
-
-- Definición de componentes
-- Hooks
-- Estilos
-- Estado
-- Eventos
-- Propiedades
-- Referencias
-- Comunicación
-- Comunicación entre componentes
-- Comunicación entre componentes (Hooks)
