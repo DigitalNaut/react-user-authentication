@@ -1,0 +1,23 @@
+/* .container {
+  padding: 0.5em;
+  margin: 1em 0;
+  text-align: center;
+
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-outline);
+  border-radius: 0.5em;
+} */
+
+.button {
+  font-size: large;
+
+  padding: 0.5em;
+  margin: 0.5em;
+  border-radius: 0.5em;
+  border: none;
+  box-shadow: #ccc 4px 4px 16px;
+
+  background-color: var(--color-primary);
+  color: white;
+  cursor: pointer;
+}

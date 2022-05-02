@@ -1,0 +1,52 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em;
+  border-radius: 0.25em;
+
+  font-size: large;
+  background-color: var(--color-primary);
+}
+
+.container nav {
+  display: flex;
+  align-items: center;
+  color: white;
+  gap: 0.5em;
+}
+
+.link {
+  padding: 0.5em;
+  text-decoration: none;
+  color: white;
+  border-radius: 0.25em;
+}
+
+.link:hover {
+  outline: 1px solid white;
+}
+
+.activeLink {
+  padding: 0.5em;
+  text-decoration: none;
+  color: var(--color-black);
+  background-color: white;
+  border-radius: 0.25em;
+}
+
+.button {
+  padding: 0.5em;
+
+  color: white;
+  background-color: transparent;
+  font-size: large;
+
+  border-radius: 0.25em;
+  border: none;
+
+  cursor: pointer;
+}
+
+.button:hover {
+  outline: 1px solid white;
+}

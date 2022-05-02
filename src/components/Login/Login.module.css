@@ -1,0 +1,52 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 0.5em;
+  margin: 1em 0;
+
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-outline);
+  border-radius: 0.5em;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.form label {
+  font-weight: lighter;
+}
+
+.form input {
+  padding: 0.5em;
+  border: 1px solid var(--color-outline);
+  border-radius: 0.25em;
+}
+
+.form button {
+  font-size: large;
+
+  padding: 0.5em;
+  margin: 0.5em;
+  border-radius: 0.5em;
+  border: none;
+  box-shadow: #ccc 4px 4px 16px;
+
+  background-color: var(--color-primary);
+  color: white;
+  cursor: pointer;
+}
+
+.banner {
+  font-size: large;
+  text-align: center;
+  background-color: var(--color-secondary);
+  color: white;
+  padding: 0.5em;
+  border-radius: 0.25em;
+  width: 100%;
+}
