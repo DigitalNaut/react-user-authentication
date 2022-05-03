@@ -7,17 +7,30 @@ import { useAuth } from "../../auth/AuthContext";
 export default function Login() {
   const [user, setUser] = useState("");
   const { login } = useAuth();
-  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
   const { state } = useLocation();
+  const navigate = useNavigate();
 
   const redirectPath = state?.from || "/";
   const unauthorized = state?.unauthorized;
 
   const handleLogin = (event) => {
     event.preventDefault();
+    setLoading(true);
 
-    login(user);
-    navigate(redirectPath, { replace: true });
+    login(
+      {
+        user,
+      },
+      () => {
+        navigate(redirectPath);
+      },
+      (err) => {
+        setLoading(false);
+        setError(err);
+      }
+    );
   };
 
   return (
@@ -29,19 +42,23 @@ export default function Login() {
       )}
       <div className={styles.container}>
         <h1>Login</h1>
-        <form className={styles.form} onSubmit={handleLogin}>
-          <label className={styles.label}>Usuario</label>
-          <input
-            className={styles.input}
-            type="text"
-            required
-            value={user}
-            onChange={(event) => setUser(event.currentTarget.value)}
-          />
-          <button className={styles.button} type="submit">
-            Login
-          </button>
-        </form>
+        {error && <p className={styles.banner}>{error}</p>}
+        {loading && <p>Loading...</p>}
+        {!loading && (
+          <form className={styles.form} onSubmit={handleLogin}>
+            <label className={styles.label}>Usuario</label>
+            <input
+              className={styles.input}
+              type="text"
+              required
+              value={user}
+              onChange={(event) => setUser(event.currentTarget.value)}
+            />
+            <button className={styles.button} type="submit">
+              Login
+            </button>
+          </form>
+        )}
       </div>
     </>
   );
