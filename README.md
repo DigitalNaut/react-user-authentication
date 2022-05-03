@@ -26,5 +26,19 @@
 ## Instalación
 
 ```sh
-git clone "https://github.com/DigitalNaut/react-user-authentication" && cd react-cheat-sheet && npm i && npm start
+git clone "https://github.com/DigitalNaut/react-user-authentication" && cd react-cheat-sheet && npm i
+```
+
+## Correr el proyecto
+
+1. Levanta el servidor mock en una terminal
+
+```sh
+npm run dev
+```
+
+2. Corre el proyecto en otra terminal
+
+```sh
+npm start
 ```
