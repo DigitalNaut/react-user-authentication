@@ -50,3 +50,14 @@
 .button:hover {
   outline: 1px solid white;
 }
+
+.userCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0.5em;
+  border-radius: 0.25em;
+  background-color: var(--color-secondary);
+  color: var(--color-black);
+}

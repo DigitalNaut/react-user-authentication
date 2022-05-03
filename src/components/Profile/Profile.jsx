@@ -16,7 +16,7 @@ export default function Profile() {
     <div className="container">
       <h1>Perfil de {user}</h1>
       <button className={styles.button} onClick={handleLogout}>
-        Log Out
+        Cerrar sesión
       </button>
     </div>
   );

@@ -7,6 +7,7 @@ import Login from "./components/Login/Login";
 import Profile from "./components/Profile/Profile";
 import ProtectedRoutes from "./components/ProtectedRoutes";
 import Logout from "./components/Logout/Logout";
+import Gallery from "./components/Gallery/Gallery";
 
 export default function App() {
   return (
@@ -14,8 +15,9 @@ export default function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Blurb />} />
-        <Route path="/profile" element={<ProtectedRoutes />}>
-          <Route path="" element={<Profile />} />
+        <Route path="/" element={<ProtectedRoutes />}>
+          <Route path="profile" element={<Profile />} />
+          <Route path="gallery" element={<Gallery />} />
         </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/logout" element={<Logout />} />
