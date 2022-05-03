@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ReactComponent as HackademyLogo } from "../../assets/logo.svg";
 
 import styles from "./Blurb.module.css";
@@ -38,6 +39,8 @@ export default function Blurb() {
         .
       </p>
       <HackademyLogo width={64} height={64} />
+      <br />
+      <Link to="/login">Iniciar sesión</Link>
     </div>
   );
 }
