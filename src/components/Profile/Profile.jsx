@@ -14,7 +14,9 @@ export default function Profile() {
 
   return (
     <div className="container">
-      <h1>Perfil de {user}</h1>
+      <h1>Perfil de {user.name}</h1>
+      <h2>Tu token es:</h2>
+      <p>{user.token}</p>
       <button className={styles.button} onClick={handleLogout}>
         Cerrar sesión
       </button>

@@ -1,4 +1,4 @@
-# Autenticación de Usuarios
+# Contexto de React y Manejo de Login con JWT
 
 <div align="center">
   <img src="./readme_icons/react.svg#gh-light-mode-only" title="React" alt="React" />
@@ -29,16 +29,10 @@
 git clone "https://github.com/DigitalNaut/react-user-authentication" && cd react-cheat-sheet && npm i
 ```
 
-## Correr el proyecto
+## Corre el proyecto
 
-1. Levanta el servidor mock en una terminal
-
-```sh
-npm run dev
-```
-
-2. Corre el proyecto en otra terminal
+Levanta el servidor simulado y el proyecto simultáneamente con el comando:
 
 ```sh
-npm start
+npm run start
 ```

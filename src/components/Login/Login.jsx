@@ -5,7 +5,7 @@ import styles from "./Login.module.css";
 import { useAuth } from "../../auth/AuthContext";
 
 export default function Login() {
-  const [user, setUser] = useState("");
+  const [username, setUser] = useState("");
   const { login } = useAuth();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -21,7 +21,8 @@ export default function Login() {
 
     login(
       {
-        user,
+        username,
+        password: "",
       },
       () => {
         navigate(redirectPath);
@@ -51,7 +52,7 @@ export default function Login() {
               className={styles.input}
               type="text"
               required
-              value={user}
+              value={username}
               onChange={(event) => setUser(event.currentTarget.value)}
             />
             <button className={styles.button} type="submit">

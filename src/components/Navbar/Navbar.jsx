@@ -14,8 +14,8 @@ function FancyLink({ to, children }) {
   );
 }
 
-function UserCard({ user }) {
-  return <div className={styles.userCard}>👤 {user}</div>;
+function UserCard({ username }) {
+  return <div className={styles.userCard}>👤 {username}</div>;
 }
 
 export default function Navbar() {
@@ -32,7 +32,7 @@ export default function Navbar() {
         {!user && <FancyLink to="/login">Iniciar sesión</FancyLink>}
         {user && (
           <>
-            <UserCard user={user} />
+            <UserCard username={user.name} />
             <FancyLink to="/logout">Cerrar sesión</FancyLink>
           </>
         )}
