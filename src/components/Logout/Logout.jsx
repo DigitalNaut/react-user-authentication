@@ -21,7 +21,7 @@ export default function Logout() {
   useEffect(() => {
     logout();
 
-    const timer = redirectTimer(3000, () => navigate("/"));
+    const timer = redirectTimer(2000, () => navigate("/login"));
 
     return () => clearTimeout(timer);
   }, [logout, navigate]);

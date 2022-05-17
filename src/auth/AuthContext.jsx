@@ -1,6 +1,6 @@
+import { createContext, useContext, useState, useEffect } from "react";
 import axios from "axios";
-import { createContext, useContext, useState } from "react";
-import decode from "jwt-decode";
+import { getUser } from "./jwtHelper";
 
 const AuthContext = createContext(null);
 
@@ -8,18 +8,14 @@ export function AuthProvider({ children }) {
   const [user, setUser] = useState();
 
   function getToken() {
-    // Retrieves the user token from localStorage
+    // Recupera el token del localStorage
     return localStorage.getItem("token");
-  }
-
-  function getUser() {
-    return decode(getToken()).user;
   }
 
   function finishAuthentication(token) {
     localStorage.setItem("token", token);
     setUser({
-      name: getUser(),
+      name: getUser(token),
       token,
     });
   }
@@ -48,6 +44,19 @@ export function AuthProvider({ children }) {
     setUser(null);
     localStorage.removeItem("token");
   }
+
+  useEffect(function restoreSession() {
+    const token = getToken();
+
+    if (token) {
+      const name = getUser(token);
+
+      setUser({
+        name,
+        token,
+      });
+    } else setUser(null);
+  }, []);
 
   return (
     <AuthContext.Provider value={{ user, login, logout }}>

@@ -4,17 +4,18 @@ import { Outlet, useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "../auth/AuthContext";
 
 export default function ProtectedRoutes() {
-  const { user } = useAuth();
   const navigate = useNavigate();
   const { pathname } = useLocation();
+  const { user } = useAuth();
 
   useEffect(() => {
-    if (!user)
+    if (user === null)
+      // No hay usuario guardado si es nulo
       navigate("/login", {
         replace: true,
         state: { from: pathname, unauthorized: true },
       });
-  }, [navigate, user, pathname]);
+  }, [user, navigate, pathname]);
 
   if (user) return <Outlet />;
 }

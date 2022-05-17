@@ -18,3 +18,12 @@ export function isTokenExpired(token) {
 
   return !(date.valueOf() > new Date().valueOf);
 }
+
+export function getUser(token) {
+  try {
+    return decode(token).user;
+  }
+  catch (error) {
+    return null;
+  }
+}
