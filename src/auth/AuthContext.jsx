@@ -1,19 +1,27 @@
+/** Referencias:
+ * Autenticación de usuarios con React.js y JWT https://www.youtube.com/watch?v=ON87B1PJIlY
+ * React Router Tutorial - 15 - Authentication and Protected Routes: https://www.youtube.com/watch?v=X8eAbu1RWZ4
+ * Secure Authentication for Web Apps & APIs Using JWTs: https://frontendmasters.com/courses/secure-auth-jwt/
+ */
+
 import { createContext, useContext, useState, useEffect } from "react";
 import axios from "axios";
-import { getUser } from "./jwtHelper";
+import {
+  getToken,
+  getUser,
+  initAxiosInterceptors,
+  setToken,
+} from "./jwtHelper";
 
 const AuthContext = createContext(null);
+
+initAxiosInterceptors(); // inicializar interceptores de axios para mandar el token en cada petición
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState();
 
-  function getToken() {
-    // Recupera el token del localStorage
-    return localStorage.getItem("token");
-  }
-
   function finishAuthentication(token) {
-    localStorage.setItem("token", token);
+    setToken(token);
     setUser({
       name: getUser(token),
       token,
@@ -36,6 +44,7 @@ export function AuthProvider({ children }) {
         success();
       }
     } catch (err) {
+      console.error(err);
       error("No se pudo iniciar sesión");
     }
   }

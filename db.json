@@ -16,5 +16,27 @@
       "id": "Sonia",
       "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJsb2dpbiIsInVzZXIiOiJTb25pYSIsImlhdCI6MTUxNjIzOTAyMiwiZXhwIjoxMDAwMDAwMH0.h0IdK97xzN3R4BMImRc7ESxXVvxQnbwaw5TD7ekc9lI"
     }
+  ],
+  "gallery": [
+    {
+      "id": "1",
+      "title": "Flores",
+      "url": "https://images.unsplash.com/photo-1652653707325-14d10ca8887e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&q=80"
+    },
+    {
+      "id": "2",
+      "title": "Milky May",
+      "url": "https://images.unsplash.com/photo-1652703301268-167e328eb4af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&q=80"
+    },
+    {
+      "id": "3",
+      "title": "Isla",
+      "url": "https://images.unsplash.com/photo-1651926582867-ac5aca9ff5cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&q=80"
+    },
+    {
+      "id": "4",
+      "title": "Perrito",
+      "url": "https://images.unsplash.com/photo-1652489997199-4d80abd175db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&q=80"
+    }
   ]
 }

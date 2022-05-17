@@ -1,0 +1,25 @@
+.banner {
+  font-size: large;
+  text-align: center;
+  background-color: var(--color-secondary);
+  color: white;
+  padding: 0.5em;
+  border-radius: 0.25em;
+  width: 100%;
+}
+
+.galleryItems {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  width: 100%;
+}
+
+.galleryItems img {
+  width: 150px;
+  aspect-ratio: 0.5;
+  object-fit: cover;
+}
